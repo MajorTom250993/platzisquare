@@ -14,7 +14,9 @@ export class AppComponent {
     { active: true, nombre: 'Las Gatortas' },
     { active: false, nombre: 'Cafebrería' },
     { active: true, nombre: 'La Dosis' }
-];
+  ];
+  lat: number = 19.4182086;
+  lng: number = -99.1616303;
 
   constructor() {
 
