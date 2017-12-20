@@ -11,6 +11,7 @@ import { Routes } from '@angular/router';
 import { RouterModule } from '@angular/router';
 import { DetalleComponent } from './detalle/detalle.component';
 import { LugaresComponent } from './lugares/lugares.component';
+import { ContactoComponent } from './contacto/contacto.component';
 
 const appRoutes: Routes = [
   {path: '', component: LugaresComponent},
@@ -25,6 +26,7 @@ const appRoutes: Routes = [
     ContarClicksDirective,
     DetalleComponent,
     LugaresComponent,
+    ContactoComponent,
   ],
   imports: [
     BrowserModule,
