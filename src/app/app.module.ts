@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { environment } from "../environments/environment";
 
 
 import { AppComponent } from './app.component';
@@ -32,7 +33,7 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCggvxBjxpntoMMf7zkLqSxgGjw5HzBj_4'
+      apiKey: environment.agmApiKey
     }),
     RouterModule.forRoot(appRoutes)
   ],
