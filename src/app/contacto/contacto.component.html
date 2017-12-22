@@ -1,3 +1,32 @@
-<p>
-  contacto works!
-</p>
+<!-- START: BREADCRUMB -->
+<nav aria-label="breadcrumb" role="navigation">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a routerLink="/lugares">Lugares</a> / Contacto
+    </li>
+  </ol>
+</nav>
+<!-- END: BREADCRUMB -->
+
+<!-- START: FORM-->
+<div class="container">
+  <form action="">
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre">
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="randomtext@ejemplo">
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="mensaje">Mensaje</label>
+        <textarea class="form-control" name="" id="mensaje" cols="15" rows="10" placeholder="Ingresa tu mensaje aquí"></textarea>
+      </div>
+      <a routerLink="" class="btn btn-primary">Enviar</a>
+      <a routerLink="/" class="btn btn-secondary">Cancelar</a>
+  </form>
+</div>
+<!-- END: FORM -->

@@ -1,13 +1,22 @@
-<div class="well">
-    <a routerLink="/lugares">Lugares</a> / {{lugar.nombre}}
-</div>
+<!-- START: BREADCRUMBS -->
+<nav aria-label="breadcrumb" role="navigation">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a routerLink="/lugares">Lugares</a> / {{lugar.nombre}}
+    </li>
+  </ol>
+</nav>
+<!-- END: BREADCRUMBS -->
+
+<!-- START: DESCRIPTION -->
 <div class="container">
   <h1>{{lugar.nombre}}</h1>
   <hr>
   <small>{{lugar.distancia}}</small>
   <br>
-  <div class="well">
+  <div class="card">
     <p>{{lugar.description}}</p>
     <b>{{lugar.plan}}</b>
   </div>
 </div>
+<!-- END: DESCRIPTION -->
