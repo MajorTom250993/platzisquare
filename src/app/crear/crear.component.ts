@@ -1,3 +1,4 @@
+import { LugaresService } from './../services/lugares.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./crear.component.scss']
 })
 export class CrearComponent implements OnInit {
+  lugar: any = {};
+  constructor(private lugaresService: LugaresService) { }
 
-  constructor() { }
-
+  guardarLugar() {
+    this.lugaresService.guardarLugar(this.lugar);
+  }
   ngOnInit() {
   }
 

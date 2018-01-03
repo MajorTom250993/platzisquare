@@ -1,3 +1,42 @@
-<p>
-  crear works!
-</p>
+<!-- START: BREADCRUMB -->
+<nav aria-label="breadcrumb" role="navigation">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a routerLink="/">Lugares</a> / Crear Lugar
+    </li>
+  </ol>
+</nav>
+<!-- END: BREADCRUMB -->
+
+<!-- START: FORM-->
+<div class="container">
+  <form action="">
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input type="text" class="form-control" name="lugar" id="nombre" placeholder="Nombre del Lugar" [(ngModel)]="lugar.nombre">
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="distancia">Distancia</label>
+      <input type="number" class="form-control" name="distancia" id="distancia" placeholder="Distancia en km" [(ngModel)]="lugar.distancia">
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="cercania">Cercanía</label>
+      <input type="number" class="form-control" name="cercania" id="cercania" placeholder="Cercanía" [(ngModel)]="lugar.cercania">
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="plan">Plan</label>
+      <input type="email" class="form-control" name="plan" id="plan" placeholder="Pagado o Gratis" [(ngModel)]="lugar.plan">
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="descripcion">Descripción</label>
+      <textarea class="form-control" name="descripcion" id="descripcion" cols="15" rows="10" placeholder="Descripción del negocio" [(ngModel)]="lugar.descripcion"></textarea>
+    </div>
+    <a class="btn btn-primary" (click)="guardarLugar()">Enviar</a>
+    <a routerLink="/lugares" class="btn btn-secondary">Cancelar</a>
+  </form>
+</div>
+<!-- END: FORM -->
