@@ -11,7 +11,10 @@ export class CrearComponent implements OnInit {
   constructor(private lugaresService: LugaresService) { }
 
   guardarLugar() {
+    this.lugar.id = Date.now();
     this.lugaresService.guardarLugar(this.lugar);
+    alert('Se ha creado el negocio con éxito');
+    this.lugar = {};
   }
   ngOnInit() {
   }
