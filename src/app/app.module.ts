@@ -1,7 +1,9 @@
+// Modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AgmCoreModule } from '@agm/core';
+import { HttpModule } from '@angular/http';
 
 // Directives
 import { ResaltarDirective } from './directives/resaltar.directive';
@@ -62,7 +64,8 @@ export const firebaseConfig = {
     RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    HttpModule
   ],
   providers: [
     LugaresService,
