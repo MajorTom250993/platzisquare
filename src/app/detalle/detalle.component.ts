@@ -10,7 +10,7 @@ import { LugaresService } from '../services/lugares.service';
 export class DetalleComponent implements OnInit {
 
   id = null;
-  lugar: any = {}
+  lugar: any = {};
   constructor(private route: ActivatedRoute, private lugaresService: LugaresService) {
     console.log(this.route.snapshot.params['id']);
     console.log(this.route.snapshot.queryParams['action2']);

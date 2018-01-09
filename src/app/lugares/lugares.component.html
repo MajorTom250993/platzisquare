@@ -1,6 +1,6 @@
 <!-- START: MAPA -->
 <agm-map [latitude]="lat" [longitude]="lng">
-  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+  <agm-marker *ngFor="let lugar of lugares" [latitude]="lugar.lat" [longitude]="lugar.lng"></agm-marker>
 </agm-map>
 <hr>
 <!-- END: MAPA -->
@@ -10,10 +10,10 @@
   <div class="row">
     <div class="col-md-8">
       <h2>Lugares cercanos</h2>
-      <a routerLink="/crear" class="btn btn-primary">Crear Nuevo Negocio</a>
+      <a routerLink="/crear/new" class="btn btn-primary">Crear Nuevo Negocio</a>
       <ul class="list-group">
         <ng-container *ngFor="let lugar of lugares">
-          <a routerLink="/detalle/{{lugar.id}}" [queryParams]="{action2:'edit', referer:'google'}" ><li class="list-group-item">{{lugar.nombre}}</li></a>
+          <a routerLink="/crear/{{lugar.id}}"><li class="list-group-item">{{lugar.nombre}}</li></a>
         </ng-container>
       </ul>
     </div>
